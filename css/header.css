@@ -109,12 +109,12 @@
   padding-bottom: 20px;
 }
 
-.navigation__menu__sublist {
+.navigation-menu__sublist {
   background-color: #353436;
   position: absolute;
+  z-index: 99;
   top: 41px;
   left: -17px;
-  z-index: 1;
   list-style-type: none;
   padding: 9px 8px 7px 9px;
   width: 149px;
@@ -127,8 +127,97 @@
   transition: 0.3s ease-in-out;
 }
 
+.navigation__item:hover .navigation-menu__sublist {
+  opacity: 1;
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+
+.navigation__subitem {
+  position: relative;
+  padding: 4px 8px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.navigation__subitem:after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.navigation__subitem:last-child:after {
+  content: none;
+}
+
+.navigation__subitem:hover {
+  color: #e2d1a6;
+}
+
+
+/*Burger menu*/
+.burger-menu__container {
+  display: none;
+  color: #ffffff;
+  position: absolute;
+  top: 0;
+  right: 50%;
+  -webkit-transform: translate(50%, 50px);
+  transform: translate(50%, 50px);
+  padding: 18px 8px;
+  list-style-type: none;
+  background-color: #353436;
+  z-index: 1;
+}
+.burger__button {
+  position: relative;
+    background-image: url(../img/header/burger-menu/burger-menu.svg);
+    background-color: inherit;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    z-index: 8;
+}
+.burger__menu {
+  display: none;
+  color: #ffffff;
+  position: absolute;
+  top: 0;
+  right: 50%;
+  -webkit-transform: translate(50%, 50px);
+  transform: translate(50%, 50px);
+  padding: 18px 8px;
+  list-style-type: none;
+  background-color: #353436;
+  z-index: 1;
+}
+.burger__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #353436;
+  width: 120px;
+  min-width: 140px;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.burger__item:last-child {
+  margin-bottom: 5px;
+}
+
 /*Animation effects*/
-.navigation__item__selected {
+.navigation-item__selected {
   font-family: 'Open Sans', sans-serif;
   color: #e2d1a6;
   font-weight: 700;
@@ -139,29 +228,26 @@
   .navigation__menu {
     display: none;
   }
-  .burger__menu__container {
+  .burger-menu__container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
   .login__btn {
-    margin-top: 20px;
-    
-      position: relative;
-      background-image: url(../img/header/burger-menu.svg);
-      background-color: inherit;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      background-position: center;
-      width: 40px;
-      height: 40px;
-      z-index: 8;
-  
+    display: inline-block;
+    font-size: 14px;
+    line-height: 24px;
+    background: inherit;
+    margin-right: 6px;
+    padding: 1px 0;
   }
   .header__menu {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+  }
+  .login__area {
+    margin-top: 10px;
   }
 }
 
@@ -212,9 +298,24 @@
     align-items: center;
     margin: 0;
   }
-  .burger__menu__container {
-    margin: 0;
+  .login__area {
+    left: 0;
+  }
+  .burger-menu__container {
+    margin: auto;
+    margin-top: -80px;
+    right: 0;
     min-width: 100px;
+    position: absolute;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    z-index: 3;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
   .burger__button {
     width: 33px;
@@ -230,7 +331,15 @@
     min-width: 108px;
   }
   .login__btn {
-    margin: 0;
+    margin: 3;
+  }
+  .login__icon {
+    margin: auto;
+}
+}
+@media (max-width: 480px) {
+  .burger-menu__container{
+    margin-right: 1px;
   }
 }
 
@@ -241,7 +350,7 @@
     color: #e2d1a6;
     background: inherit;
   }
-  .burger__menu__container {
+  .burger-menu__container {
     display: none;
   }
 }
