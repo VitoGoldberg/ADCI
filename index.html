@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mmlampadari</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:700,700i&display=swap&subset=cyrillic"/>  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap&subset=cyrillic,cyrillic-ext,latin-ext"/>
+
+    <link rel="stylesheet" href="js/libs/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="js/libs/slick-1.8.1/slick/slick-theme.css">
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/header.css" />
+	  <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/overlay.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__block">
+          <div class="header__logo">
+            <img src="img/header/logo.png" alt="Logo" />
+          </div>
+          <div class="header__menu">
+            <!--Login button-->
+            <div class="login__area">
+              <button class="login__btn">area riservata</button>
+              <img class="login__icon" src="img/header/lock.png" alt="lock" />
+            </div>
+            <!--Navigation menu-->
+            <nav class="navigation__menu">
+              <ul class="navigation__list">
+                <li class="navigation__item navigation-item__selected">
+                  <a href="#">Home</a>
+                </li>
+                <!--Drop menu-->
+                <li class="navigation__item">
+                  <a href="#">Azienda</a>
+                  <ul class="navigation-menu__sublist">
+                    <li class="navigation__subitem">
+                      <a href="#">Storia</a>
+                    </li>
+                    <li class="navigation__subitem">
+                      <a href="#">mm design</a>
+                    </li>
+                    <li class="navigation__subitem">
+                      <a href="#">Designer</a>
+                    </li>
+                    <li class="navigation__subitem">
+                      <a href="#">Certificazioni</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="navigation__item"><a href="#">Collezioni</a></li>
+                <li class="navigation__item"><a href="#">News</a></li>
+                <li class="navigation__item"><a href="#">Contatti</a></li>
+              </ul>
+            </nav>
+            <!--Burger-menu for mob version-->
+            <div class="burger-menu__container">
+              <button class="burger__button"></button>
+              <ul class="burger__menu">
+                <li class="burger__item"><a href="#">Home</a></li>
+                <li class="burger__item"><a href="#">Azienda</a></li>
+                <li class="burger__item"><a href="#">Collezioni</a></li>
+                <li class="burger__item"><a href="#">News</a></li>
+                <li class="burger__item"><a href="#">Contatti</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <main class="main">
+		<!--Slider-->
+        <div class="main__slider">
+		      <div class="slider__item"></div>
+          <div class="slider__item"></div>
+          <div class="slider__item"></div>
+        </div>
+
+    <!--Description item-->
+	  <div class="main__description">
+		<h1 class="main-description__title">Lampadari contemporanei</h1>
+		<p class="main-description__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
+	  </div>
+
+    <!--Hidden Info section-->
+    <div class="main__info"> 
+			<div class="main__container">	
+				<div class="main-info__box">
+
+					<div class="main-info__item">
+						<h2 class="main-info__title">Stai pensando ad un progetto?</h2>
+						<p class="main-info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
+						<span class="maininfo__link-wrap">
+							<a href="#" class="main-info__link">Approfondisci</a>
+						</span>
+					</div>
+					
+					<div class="main-info__item">
+						<h2 class="main-info__title">Vi aspettiamo alla fiera Euroluce</h2>
+						<p class="main-info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
+						<span class="maininfo__link-wrap">
+							<a href="#" class="main-info__link">Approfondisci</a>
+						</span>
+					</div>
+					
+					<div class="main-info__item">
+						<h2 class="main-info__title">Scopri la nuova collezione</h2>
+						<p class="main-info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
+						<span class="maininfo__link-wrap">
+							<a href="#" class="main-info__link">Approfondisci</a>
+						</span>
+					</div>
+					
+					<button class="main-info__button"></button>
+				</div>	
+			</div>
+		</div>
+    </main>
+    
+    <!--Overlay and modal window-->
+    <div class="overlay">
+      <div class="overlay__modal">
+        <h2 class="overlay__title">area reservata</h2>
+        
+        <div class="overlay__forms">
+  
+          <form action="#" class="form overlay__form" id="overlay-login">
+            <h3 class="form__title">accedi</h3>
+            <input type="email" name="userEmail" class="input form__input" placeholder="E-mail">
+            <input type="password" name="userPassword" class="input form__input" placeholder="Password">
+            <button class="button form__button">accedi</button>
+            <a href="#" class="form__link">Password dimenticata</a>
+          </form>
+  
+          <form action="#" class="form overlay__form" id="overlay-registration">
+            <h3 class="form__title">registrati</h3>
+            <input type="text" name="userName" class="input form__input" placeholder="Nome">
+            <input type="text" name="userSurname" class="input form__input" placeholder="Cognome">
+            <input type="email" name="userEmail" class="input form__input" placeholder="E-mail">
+            <input type="password" name="userPassword" class="input form__input" placeholder="Password">
+
+            <div class="form__checkbox-wrapper">
+              <input type="checkbox" id="overlay-data-processing" class="form__checkbox">
+              <label for="overlay-data-processing" class="form__label">Acconsento al trattamento dei dati</label>
+            </div>
+
+            <div class="form__checkbox-wrapper">
+              <input type="checkbox" id="overlay-mailing" class="form__checkbox">
+              <label for="overlay-mailing" class="form__label">Mi iscrivo alla Newsletter</label>
+            </div>
+
+            <button class="button form__button">iscriviti</button>
+          </form>
+        </div>
+  
+        <div class="overlay__close"></div>
+      </div>
+    </div>  
+    
+
+    <footer class="footer">
+      <div class="footer__container">
+        <!--Information (3 columns) and NEWSLETTER form-->
+        <div class="footer__info">
+          <div class="footer-info__item">
+            <h3 class="footer-info__title">Lampadari made in italy</h3>
+            <p class="footer-info__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea
+            </p>
+          </div>
+
+          <div class="footer-info__item">
+            <h3 class="footer-info__title">lampadari artigianali</h3>
+            <p class="footer-info__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea
+            </p>
+          </div>
+
+          <div class="footer-info__item">
+            <h3 class="footer-info__title">45 anni di esperienza</h3>
+            <p class="footer-info__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea
+            </p>
+          </div>
+          <!--Блок с формой-->
+          <div class="footer-info__item">
+            <h3 class="footer-info__title">Newsletter</h3>
+            <form class="form footer__form" id="footer-form">
+              <input type="text" name="userName" class="form__input input" placeholder="Nome e Cognome"/> 
+              <input type="email" name="userEmail" class="form__input input" placeholder="Email"/>
+              <div class="form__checkbox-wrapper">
+                <input type="checkbox" id="footer-checkbox"  class="footer-form__checkbox"/>
+                <label for="footer-checkbox" class="form__label">Acconsento al trattamento dei dati</label>  
+              </div>
+              <button class="button">iscriviti</button>
+            </form>
+          </div>
+        </div>
+
+        <!--Contacts, socials, language choice-->
+        <div class="footer__contacts">
+          <div class="footer-contacts__info">
+            <a href="#" class="contacts__link">MMLAMPADARI&nbsp;srl</a>
+            <a href="#" class="contacts__link">Via&nbsp;Feltrina&nbsp;00</a>
+            <a href="#" class="contacts__link">31111&nbsp;Pederobba&nbsp;(TV)</a>  
+            <a href="#" class="contacts__link">0423.123456</a>
+            <a href="#" class="contacts__link">info@mmlampadari.mm</a>
+            <a href="#" class="contacts__link">P.IVA&nbsp;04123456789</a>
+          </div>
+
+          <div class="footer-contacts__block">
+            <div class="contacts__social">
+
+              <a href="#" class="contacts__link">
+                <img class="contacts__icon" src="img/footer/fb-logo.svg" alt="facebook"/>   
+              </a>
+              <a href="#" class="contacts__link">
+                <img class="contacts__icon" src="img/footer/inst-logo.svg" alt="instagram"/>   
+              </a>
+              <a href="#" class="contacts__link"> 
+                <img class="contacts__icon" src="img/footer/pin-logo.svg" alt="pinterest"/>
+              </a>
+            </div>
+
+            <div class="contacts__languages">
+              <div class="contacts__language link"><a href="#">ita</a></div>
+              <div class="contacts__language link"><a href="#">eng</a></div>
+              <div class="contacts__language link"><a href="#">deu</a></div>
+              <div class="contacts__language link"><a href="#">pyc</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+    
+    <script src="js/libs/jquery-3.6.0.min.js"></script>
+    <script src="js/libs/slick-1.8.1/slick/slick.min.js"></script>
+  </body>
+</html>
